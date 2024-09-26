@@ -1,2 +1,2 @@
-# Hackathon_01\n
+# Hackathon_01
 Resume builder
