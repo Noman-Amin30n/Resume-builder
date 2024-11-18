@@ -1,3 +1,9 @@
+// about me description edit button
+
+export const aboutDescriptionEdit = document.querySelector("#about-description-edit") as HTMLElement;
+export const aboutDescriptionSave = document.querySelector("#about-description-save") as HTMLElement;
+export const aboutMeDescription = document.querySelector("#about-me-description") as HTMLElement;
+
 // Field edit buttons
 
 export const ageEdit = document.querySelector("#age-edit") as HTMLElement;

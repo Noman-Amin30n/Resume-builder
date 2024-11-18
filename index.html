@@ -1,386 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Builder</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>Noman Ameen</h1>
-        <div>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-github"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style/form.css">
+</head>
+<body>
+    <form>
+        <div id="progress-bar">
+            <div class="progress"></div>
+            <div class="progress-steps" id="step-1">Personal Details</div>
+            <div class="progress-steps" id="step-2">Skills</div>
+            <div class="progress-steps" id="step-3">Experience</div>
+            <div class="progress-steps" id="step-4">Education</div>
         </div>
-      </header>
+        <div class="form-section-container">
+            <div id="personal-section">
+                <fieldset id="personal-section-main">
+                    <legend class="legend">Personal Details</legend>
+                    <section class="personal-section-1">
+                        <div>
+                            <label for="name">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label for="age">Age</label>
+                            <input type="text" name="age" id="age" placeholder="Enter your age" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div>
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" placeholder="Enter your home address" rows="3"></textarea>
+                        </div>
+                    </section>
+                    <section class="personal-section-2">
+                        <div>
+                            <label for="profession">Profession</label>
+                            <input type="text" name="profession" id="profession" placeholder="Enter your profession" required>
+                        </div>
+                        <div>
+                            <label for="about">About</label>
+                            <textarea name="about" id="about" placeholder="Explain about yourself" rows="10"></textarea>
+                        </div>
+                    </section>
+                </fieldset>
 
-      <section class="Resume-container">
-        <section id="for-download">
-          <section class="section-01">
-            <div class="profile-pic-container">
-              <div class="profile-pic">
-                <img src="images/pic.jpeg" alt="User Profile Pic" />
-              </div>
-            </div>
-            <div class="username-profession-container">
-              <h1>Noman Ameen</h1>
-              <p>Graphic Designer & Web Developer</p>
-              <div id="download-and-hire-me-buttons-container">
-                <button id="download-button">Download CV</button>
-                <button id="hire-me-button">Hire Me</button>
-              </div>
-            </div>
-          </section>
-
-          <section class="section-02">
-            <section class="about-me">
-              <h2>About Me</h2>
-              <p>
-                Hello! I’m Noman Ameen. I am passionate about UI/UX design and
-                Web Design. I am a skilled Front-end Developer and master of
-                Graphic Design tools such as Photoshop and Sketch.
-              </p>
-            </section>
-
-            <section class="personel-info">
-              <p class="labels">Age</p>
-              <div class="values-and-edit-container">
-                <p id="age-value" contenteditable="false">21</p>
-                <i class="fa-regular fa-pen-to-square" id="age-edit"></i>
-                <span id="age-save" style="display: none">save</span>
-              </div>
-
-              <p class="labels">Email</p>
-              <div class="values-and-edit-container">
-                <p id="email-value" contenteditable="false">nomankhan30n@gmail.com</p>
-                <i class="fa-regular fa-pen-to-square" id="email-edit"></i>
-                <span id="email-save" style="display: none">save</span>
-              </div>
-
-              <p class="labels">Phone</p>
-              <div class="values-and-edit-container">
-                <p id="phone-value" contenteditable="false">+92 3153700263</p>
-                <i class="fa-regular fa-pen-to-square" id="phone-edit"></i>
-                <span id="phone-save" style="display: none">save</span>
-              </div>
-
-              <p class="labels">Address</p>
-              <div class="values-and-edit-container">
-                <p id="address-value" contenteditable="false">H# R-464, 17-A Sector, Shah Latif Town, Karachi</p>
-                <i class="fa-regular fa-pen-to-square" id="address-edit"></i>
-                <span id="address-save" style="display: none">save</span>
-              </div>
-            </section>
-          </section>
-
-          <section class="section-03">
-            <h2>Professional Skills</h2>
-            <section class="skills-container">
-              <div class="single-skill">
-                <p>HTML</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
+                <div id="personal-section-navigation">
+                    <a href="#progress-bar"><button id="next-1">Next</button></a>
                 </div>
-              </div>
-
-              <div class="single-skill">
-                <p>Adobe Photoshop</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                </div>
-              </div>
-
-              <div class="single-skill">
-                <p>CSS</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                </div>
-              </div>
-
-              <div class="single-skill">
-                <p>Sketch</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                </div>
-              </div>
-
-              <div class="single-skill">
-                <p>Javascript</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                </div>
-              </div>
-
-              <div class="single-skill">
-                <p>Adobe XD</p>
-                <div class="progress-bar">
-                  <div class="progress"></div>
-                </div>
-              </div>
-            </section>
-          </section>
-
-          <section class="section-04">
-            <h2>Work Experience</h2>
-            <div class="experience-container">
-              <div class="single-experience-container">
-                <div class="single-experience-container-left-space">
-                  <div></div>
-                </div>
-                <div class="experience-data">
-                  <h3 id="experience-place-01">
-                    Frontend Developer
-                    <span
-                      >at
-                      <span id="experience-role-01">Creative Agency</span></span
-                    >
-                  </h3>
-                  <p id="experience-date-01" class="experience-date">
-                    May, 2015 - Present
-                  </p>
-                  <p
-                    id="experience-description-01"
-                    class="experience-description"
-                  >
-                    Leverage agile frameworks to provide a robust synopsis for
-                    high level overviews. Iterative approaches to corporate
-                    strategy foster collaborative thinking to further the
-                    overall value proposition.
-                  </p>
-                </div>
-              </div>
-
-              <div class="single-experience-container">
-                <div class="single-experience-container-left-space">
-                  <div></div>
-                </div>
-                <div class="experience-data">
-                  <h3 id="experience-place-02">
-                    Graphic Designer
-                    <span
-                      >at
-                      <span id="experience-role-02">Design Studio</span></span
-                    >
-                  </h3>
-                  <p id="experience-date-02" class="experience-date">
-                    June, 2013 - May, 2015
-                  </p>
-                  <p
-                    id="experience-description-02"
-                    class="experience-description"
-                  >
-                    Override the digital divide with additional clickthroughs
-                    from DevOps. Nanotechnology immersion along the information
-                    highway will close the loop on focusing solely on the bottom
-                    line.
-                  </p>
-                </div>
-              </div>
-
-              <div class="single-experience-container">
-                <div class="single-experience-container-left-space">
-                  <div></div>
-                </div>
-                <div class="experience-data">
-                  <h3 id="experience-place-03">
-                    Junior Web Developer
-                    <span
-                      >at
-                      <span id="experience-role-03">Indie Studio</span></span
-                    >
-                  </h3>
-                  <p id="experience-date-03" class="experience-date">
-                    Jan, 2011 - May, 2013
-                  </p>
-                  <p
-                    id="experience-description-03"
-                    class="experience-description"
-                  >
-                    User generated content in real-time will have multiple
-                    touchpoints for offshoring. Organically grow the holistic
-                    world view of disruptive innovation via workplace diversity
-                    and empowerment.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section-05">
-            <h2>Education</h2>
-            <div class="education-container">
-              <div class="single-education-container">
-                <div class="single-education-container-left-space">
-                  <div></div>
-                </div>
-                <div class="education-data">
-                  <h3 id="education-place-01">
-                    Master in Information Technology
-                    <span
-                      >from
-                      <span id="education-role-01"
-                        >International University</span
-                      ></span
-                    >
-                  </h3>
-                  <p id="education-date-01" class="education-date">
-                    2011 - 2013
-                  </p>
-                  <p
-                    id="education-description-01"
-                    class="education-description"
-                  >
-                    Leverage agile frameworks to provide a robust synopsis for
-                    high level overviews. Iterative approaches to corporate
-                    strategy foster collaborative thinking to further the
-                    overall value proposition.
-                  </p>
-                </div>
-              </div>
-
-              <div class="single-education-container">
-                <div class="single-education-container-left-space">
-                  <div></div>
-                </div>
-                <div class="education-data">
-                  <h3 id="education-place-02">
-                    Bachelor of Computer Science
-                    <span
-                      >from
-                      <span id="education-role-02">Regional College</span></span
-                    >
-                  </h3>
-                  <p id="education-date-02" class="education-date">
-                    2007 - 2011
-                  </p>
-                  <p
-                    id="education-description-02"
-                    class="education-description"
-                  >
-                    Override the digital divide with additional clickthroughs
-                    from DevOps. Nanotechnology immersion along the information
-                    highway will close the loop on focusing solely on the bottom
-                    line.
-                  </p>
-                </div>
-              </div>
-
-              <div class="single-education-container">
-                <div class="single-education-container-left-space">
-                  <div></div>
-                </div>
-                <div class="education-data">
-                  <h3 id="education-place-03">
-                    Science and Mathematics
-                    <span
-                      >from
-                      <span id="education-role-03">Mt. High School</span></span
-                    >
-                  </h3>
-                  <p id="education-date-03" class="education-date">
-                    1995 - 2007
-                  </p>
-                  <p
-                    id="education-description-03"
-                    class="education-description"
-                  >
-                    User generated content in real-time will have multiple
-                    touchpoints for offshoring. Organically grow the holistic
-                    world view of disruptive innovation via workplace diversity
-                    and empowerment.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </section>
-
-        <section class="section-06">
-          <h2>Contact</h2>
-
-          <div class="contact-form-and-credentials-container">
-            <div class="contact-form-container">
-              <form>
-                <div>
-                  <input
-                    type="text"
-                    name="client-name"
-                    id="client-name-field"
-                    class="text-fields"
-                    placeholder="Your Name"
-                  />
-                  <input
-                    type="text"
-                    name="client-email"
-                    id="client-email-field"
-                    class="text-fields"
-                    placeholder="Your E-mail"
-                  />
-                </div>
-
-                <div>
-                  <textarea
-                    name="client-message"
-                    id="client-message-field"
-                    class="text-fields"
-                    placeholder="Your Message"
-                  ></textarea>
-                  <input type="submit" value="Send" />
-                </div>
-              </form>
             </div>
 
-            <div class="credentials-container">
-              <p>Address</p>
-              <p>H# R-464, 17-A Sector, Shah Latif Town, Karachi</p>
-              <p>Phone</p>
-              <p>+92 3153700263</p>
-              <p>Email</p>
-              <p>nomankhan30n@gmail.com</p>
-            </div>
-          </div>
-        </section>
-      </section>
+            <div id="skills-section">
+                <fieldset id="skills-section-main">
+                    <legend class="legend">Skills</legend>
+                    <section class="skills-section-1">
+                        <div>
+                            <label for="skill-1">First Skill</label>
+                            <div>
+                                <input type="text" name="skill-1" id="skill-1" placeholder="Enter your first skill" required>
+                                <input type="number" name="skill-1-percentage" id="skill-1-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="skill-2">Second Skill</label>
+                            <div>
+                                <input type="text" name="skill-2" id="skill-2" placeholder="Enter your second skill" required>
+                                <input type="number" name="skill-2-percentage" id="skill-2-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="skill-3">Third Skill</label>
+                            <div>
+                                <input type="text" name="skill-3" id="skill-3" placeholder="Enter your third skill" required>
+                                <input type="number" name="skill-3-percentage" id="skill-3-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="skills-section-2">
+                        <div>
+                            <label for="skill-4">Fourth Skill</label>
+                            <div>
+                                <input type="text" name="skill-4" id="skill-4" placeholder="Enter your fourth skill" required>
+                                <input type="number" name="skill-4-percentage" id="skill-4-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="skill-5">Fifth Skill</label>
+                            <div>
+                                <input type="text" name="skill-5" id="skill-5" placeholder="Enter your fifth skill" required>
+                                <input type="number" name="skill-5-percentage" id="skill-5-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="skill-6">Sixth Skill</label>
+                            <div>
+                                <input type="text" name="skill-6" id="skill-6" placeholder="Enter your sixth skill" required>
+                                <input type="number" name="skill-6-percentage" id="skill-1-percentage" placeholder="%" min="0" max="100" required>
+                            </div>
+                        </div>
+                    </section>
+                </fieldset>
 
-      <footer>
-        <div>
-          <h2>Noman Ameen</h2>
-          <div>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-github"></i>
-          </div>
+                <div id="skills-section-navigation">
+                    <a href="#progress-bar"><button id="previous-1">Previous</button></a>
+                    <a href="#progress-bar"><button id="next-2">Next</button></a>
+                </div>
+            </div>
+
+            <div id="experience-section">
+                <fieldset id="experience-section-main">
+                    <legend class="legend">Experience</legend>
+                    <section class="experience-section-single">
+                        <div>
+                            <label for="experience-1">First Experience</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="experience-1-position" id="experience-1-position" placeholder="Your position" required>
+                                    <input type="text" name="experience-1-company" id="experience-1-company" placeholder="company" required>
+                                </div>
+                                <div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-1-from">From</label>
+                                        <input type="text" name="experience-1-from" id="experience-1-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-1-to">To</label>
+                                        <input type="text" name="experience-1-to" id="experience-1-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="experience-1-description" id="experience-1-description" placeholder="Explain about your experience" rows="3"></textarea>
+                        </div>
+                        <hr class="section-divider">
+                        <div>
+                            <label for="experience-2">Second Experience</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="experience-2-position" id="experience-2-position" placeholder="Your position" required>
+                                    <input type="text" name="experience-2-company" id="experience-2-company" placeholder="company" required>
+                                </div>
+                                <div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-2-from">From</label>
+                                        <input type="text" name="experience-2-from" id="experience-2-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-2-to">To</label>
+                                        <input type="text" name="experience-2-to" id="experience-2-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="experience-2-description" id="experience-2-description" rows="3" placeholder="Explain about your experience"></textarea>
+                        </div>
+                        <hr class="section-divider">
+                        <div>
+                            <label for="experience-3">Third Experience</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="experience-3-position" id="experience-3-position" placeholder="Your position" required>
+                                    <input type="text" name="experience-3-company" id="experience-3-company" placeholder="company" required>
+                                </div>
+                                <div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-3-from">From</label>
+                                        <input type="text" name="experience-3-from" id="experience-3-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="experience-date-container">
+                                        <label for="experience-3-to">To</label>
+                                        <input type="text" name="experience-3-to" id="experience-3-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="experience-3-description" id="experience-3-description" placeholder="Explain about your experience" rows="3"></textarea>
+                        </div>
+                    </section>
+                </fieldset>
+
+                <div id="experience-section-navigation">
+                    <a href="#progress-bar"><button id="previous-2">Previous</button></a>
+                    <a href="#progress-bar"><button id="next-3">Next</button></a>
+                </div>
+            </div>
+
+            <div id="education-section">
+                <fieldset id="education-section-main">
+                    <legend class="legend">Education</legend>
+                    <section class="education-section-single">
+                        <div>
+                            <label for="education-1">First Qualification</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="education-1-degree" id="education-1-degree" placeholder="Enter your degree" required>
+                                    <input type="text" name="education-1-institute" id="education-1-institute" placeholder="Institute" required>
+                                </div>
+                                <div>
+                                    <div class="education-date-container">
+                                        <label for="education-1-from">From</label>
+                                        <input type="text" name="education-1-from" id="education-1-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="education-date-container">
+                                        <label for="education-1-to">To</label>
+                                        <input type="text" name="education-1-to" id="education-1-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="education-1-description" id="education-1-description" placeholder="Explain about your degree" rows="3"></textarea>
+                        </div>
+                        <hr class="section-divider">
+                        <div>
+                            <label for="education-2">Second Qualification</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="education-2-degree" id="education-2-degree" placeholder="Your degree" required>
+                                    <input type="text" name="education-2-institute" id="education-2-institute" placeholder="Institute" required>
+                                </div>
+                                <div>
+                                    <div class="education-date-container">
+                                        <label for="education-2-from">From</label>
+                                        <input type="text" name="education-2-from" id="education-2-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="education-date-container">
+                                        <label for="education-2-to">To</label>
+                                        <input type="text" name="education-2-to" id="education-2-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="education-2-description" id="education-2-description" rows="3" placeholder="Explain about your degree"></textarea>
+                        </div>
+                        <hr class="section-divider">
+                        <div>
+                            <label for="education-3">Third Qualification</label>
+                            <div>
+                                <div>
+                                    <input type="text" name="education-3-degree" id="education-3-degree" placeholder="Enter your degree" required>
+                                    <input type="text" name="education-3-institute" id="education-3-institute" placeholder="Institute" required>
+                                </div>
+                                <div>
+                                    <div class="education-date-container">
+                                        <label for="education-3-from">From</label>
+                                        <input type="text" name="education-3-from" id="education-3-from" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                    <div class="education-date-container">
+                                        <label for="education-3-to">To</label>
+                                        <input type="text" name="education-3-to" id="education-3-to" placeholder="yyyy" minlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea name="education-3-description" id="education-3-description" placeholder="Explain about your degree" rows="3"></textarea>
+                        </div>
+                    </section>
+                </fieldset>
+
+                <div id="education-section-navigation">
+                    <a href="#progress-bar"><button id="previous-3">Previous</button></a>
+                    <input type="submit" value="Generate Resume" id="resume-generator">
+                </div>
+            </div>
         </div>
-        <div>
-          <p>&copy; Right Resume. All rights reserved.</p>
-          <p>Design - <span>Noman Ameen</span></p>
-        </div>
-      </footer>
-    </main>
-    <script type="module" src="src/edit_fields/elements.ts"></script>
-    <script type="module" src="src/edit_fields/code.ts"></script>
-    <script type="module" src="src/progress/code.ts"></script>
-  </body>
+    </form>
+    <script type="module" src="src/form/steps.ts"></script>
+    <script type="module" src="src/form/user_values.ts"></script>
+</body>
 </html>

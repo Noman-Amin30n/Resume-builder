@@ -1,6 +1,50 @@
 import { ageEdit, emailEdit, phoneEdit, addressEdit } from "./elements.js";
 import { ageValue, emailValue, phoneValue, addressValue } from "./elements.js";
 import { ageSave, emailSave, phoneSave, addressSave } from "./elements.js";
+import { aboutMeDescription, aboutDescriptionEdit, aboutDescriptionSave } from "./elements.js";
+
+let oldAbout = aboutMeDescription.innerText
+
+aboutDescriptionEdit.addEventListener("click", () => {
+    aboutMeDescription.setAttribute("contenteditable", "true");
+    aboutMeDescription.focus();
+
+    const range = document.createRange();
+    range.selectNodeContents(aboutMeDescription);
+    range.collapse(false);
+    const selection = window.getSelection();
+    selection?.removeAllRanges();
+    selection?.addRange(range);
+
+    aboutDescriptionEdit.style.display = "none";
+    aboutDescriptionSave.style.display = "block";
+    if (aboutMeDescription.getAttribute("contenteditable") === "true") {
+        aboutMeDescription.addEventListener("focus", () => {
+            aboutMeDescription.style.paddingRight = "8px";
+            aboutMeDescription.style.paddingLeft = "8px";
+        })
+        aboutMeDescription.addEventListener("blur", () => {
+            aboutMeDescription.style.paddingRight = "0px";
+            aboutMeDescription.style.paddingLeft = "0px";
+        })
+    }
+})
+
+aboutDescriptionSave.addEventListener("click", () => {
+    aboutMeDescription.blur;
+    let newAbout = aboutMeDescription.innerText
+    if (newAbout !== oldAbout) {
+        oldAbout = newAbout;
+        localStorage.setItem("updatedAbout", newAbout);
+    }
+    aboutMeDescription.setAttribute("contenteditable", "false");
+    aboutDescriptionSave.style.display = "none";
+    aboutDescriptionEdit.style.display = "block";
+    aboutMeDescription?.innerText?.toString()?.trim();
+    if (aboutMeDescription.getAttribute("contenteditable") === "false") {
+        aboutMeDescription.style.paddingRight = "0px";
+    }
+})
 
 let oldAge = ageValue.innerText
 
@@ -217,6 +261,12 @@ addressSave.addEventListener("click", () => {
 })
 
 window.addEventListener("load", () => {
+    
+    let storedAbout = localStorage.getItem("updatedAbout")
+    if (storedAbout) {
+        aboutMeDescription.textContent = storedAbout;
+        oldAbout = storedAbout;
+    }
 
     let storedAge = localStorage.getItem("updatedAge")
     if (storedAge) {
