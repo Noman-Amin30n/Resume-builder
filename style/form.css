@@ -104,7 +104,7 @@ form {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
 
@@ -465,8 +465,6 @@ form {
 #education-3-description::placeholder {
   color: #6c757d;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.2px;
 }
@@ -715,6 +713,59 @@ form {
     border-top: 1px solid #4a89dc;
     margin: 40px 0px;
   }
+
+  #name,
+#age,
+#email,
+#phone,
+#address,
+#profession,
+#about,
+#skill-1,
+#skill-2,
+#skill-3,
+#skill-4,
+#skill-5,
+#skill-6,
+#skill-1-percentage,
+#skill-2-percentage,
+#skill-3-percentage,
+#skill-4-percentage,
+#skill-5-percentage,
+#skill-6-percentage,
+#experience-1-position,
+#experience-1-company,
+#experience-1-from,
+#experience-1-to,
+#experience-1-description,
+#experience-2-position,
+#experience-2-company,
+#experience-2-from,
+#experience-2-to,
+#experience-2-description,
+#experience-3-position,
+#experience-3-company,
+#experience-3-from,
+#experience-3-to,
+#experience-3-description,
+#education-1-degree,
+#education-1-institute,
+#education-1-from,
+#education-1-to,
+#education-1-description,
+#education-2-degree,
+#education-2-institute,
+#education-2-from,
+#education-2-to,
+#education-2-description,
+#education-3-degree,
+#education-3-institute,
+#education-3-from,
+#education-3-to,
+#education-3-description {
+  padding: 8px 10px;
+  font-size: 12px;
+}
 }
 
 @media (max-width: 550px) {
